@@ -23,6 +23,10 @@ class LoginRegLocators:
     REG_NAME = (By.CSS_SELECTOR, "[data-qa = 'signup-name']")
     REG_EMAIL = (By.CSS_SELECTOR, "[data-qa = 'signup-email']")
     REG_BUTTON = (By.CSS_SELECTOR, "[data-qa = 'signup-button']")
+    LOG_FORM = (By.CSS_SELECTOR, ".login-form")
+    LOG_EMAIL = (By.CSS_SELECTOR, "[data-qa = 'login-email']")
+    LOG_PASS = (By.CSS_SELECTOR, "[data-qa = 'login-password']")
+    LOG_BUTTON = (By.CSS_SELECTOR, "[data-qa = 'login-button']")
 
 
 class RegFormLocators:
