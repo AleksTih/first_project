@@ -1,9 +1,21 @@
 from selenium.webdriver.common.by import By
 
 
+class CommonElements:
+    CONTINUE_BUTTON = (By.CSS_SELECTOR, "[data-qa = 'continue-button'")
+
+class MainPageLocators:
+    LOGIN_LINK = (By.CSS_SELECTOR, ".fa.fa-lock")
+    NAME_LOGGED_AS = (By.CSS_SELECTOR, "i.fa.fa-user + b")
+    DELETE_ACCOUNT = (By.CSS_SELECTOR, ".fa.fa-trash-o")
+
+
+class DeleteAccountLocators:
+    ACCOUNT_DELETE_TITLE = (By.CSS_SELECTOR, "[data-qa = 'account-deleted'] b")
+
+
 class HomePageLocators:
     SLIDER = (By.CSS_SELECTOR, "section#slider")
-    LOGIN_LINK = (By.CSS_SELECTOR, ".fa.fa-lock")
 
 
 class LoginRegLocators:
@@ -30,4 +42,6 @@ class RegFormLocators:
     COUNTRY = (By.CSS_SELECTOR, "#country")
     ZIPCODE = (By.CSS_SELECTOR, "#zipcode")
     PHONE_NUMBER = (By.CSS_SELECTOR, "#mobile_number")
-    CREATE_ACCOUNT_BUTTON = (By.CSS_SELECTOR, "[data-qa = 'create-account']")
+    REG_FORM_CREATE_ACCOUNT_BUTTON = (By.CSS_SELECTOR, "[data-qa = 'create-account']")
+    CREATED_ACCOUNT_TITLE = (By.CSS_SELECTOR, "[data-qa = 'account-created'")
+

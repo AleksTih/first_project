@@ -11,7 +11,7 @@ class LoginRegPage(BasePage):
         assert self.is_element_present(*LoginRegLocators.REG_FORM), "Registration form is not presented"
 
     def input_reg_name_and_email_and_go_to_step_two(self):
-        input_name = self.browser.find_element(*LoginRegLocators.REG_NAME).send_keys(fake.name())
-        input_email = self.browser.find_element(*LoginRegLocators.REG_EMAIL).send_keys(fake.email())
-        reg_button = self.browser.find_element(*LoginRegLocators.REG_BUTTON).click()
+        self.browser.find_element(*LoginRegLocators.REG_NAME).send_keys("Alexandr")
+        self.browser.find_element(*LoginRegLocators.REG_EMAIL).send_keys(fake.email())
+        self.browser.find_element(*LoginRegLocators.REG_BUTTON).click()
 
