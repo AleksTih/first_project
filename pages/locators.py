@@ -4,10 +4,13 @@ from selenium.webdriver.common.by import By
 class CommonElements:
     CONTINUE_BUTTON = (By.CSS_SELECTOR, "[data-qa = 'continue-button'")
 
+
 class MainPageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, ".fa.fa-lock")
     NAME_LOGGED_AS = (By.CSS_SELECTOR, "i.fa.fa-user + b")
     DELETE_ACCOUNT = (By.CSS_SELECTOR, ".fa.fa-trash-o")
+    LOGOUT_ACCOUNT = (By.CSS_SELECTOR, "i.fa.fa-lock")
+    CONTACT_US_BUTTON = (By.CSS_SELECTOR, ".fa.fa-envelope")
 
 
 class DeleteAccountLocators:
@@ -27,6 +30,8 @@ class LoginRegLocators:
     LOG_EMAIL = (By.CSS_SELECTOR, "[data-qa = 'login-email']")
     LOG_PASS = (By.CSS_SELECTOR, "[data-qa = 'login-password']")
     LOG_BUTTON = (By.CSS_SELECTOR, "[data-qa = 'login-button']")
+    LOG_VERIFY_ERROR = (By.XPATH, "//p[contains(text(),'Your email or password is incorrect!')]")
+    REG_VERIFY_ERROR = (By.XPATH, "//p[contains(text(), 'Email Address already exist!')]")
 
 
 class RegFormLocators:
@@ -48,4 +53,3 @@ class RegFormLocators:
     PHONE_NUMBER = (By.CSS_SELECTOR, "#mobile_number")
     REG_FORM_CREATE_ACCOUNT_BUTTON = (By.CSS_SELECTOR, "[data-qa = 'create-account']")
     CREATED_ACCOUNT_TITLE = (By.CSS_SELECTOR, "[data-qa = 'account-created'")
-

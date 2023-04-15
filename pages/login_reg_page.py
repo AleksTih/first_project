@@ -20,3 +20,9 @@ class LoginRegPage(BasePage):
         self.browser.find_element(*LoginRegLocators.LOG_EMAIL).send_keys("autotest@mail.ru")
         self.browser.find_element(*LoginRegLocators.LOG_PASS).send_keys("123456")
         self.browser.find_element(*LoginRegLocators.LOG_BUTTON).click()
+
+    def should_be_verify_error_when_unsuccessful_login_user(self):
+        assert self.is_element_present(*LoginRegLocators.LOG_VERIFY_ERROR), "Login verify error is not presented"
+
+    def should_be_verify_error_when_reg_user_with_existing_email(self):
+        assert self.is_element_present(*LoginRegLocators.REG_VERIFY_ERROR), "Register verify error is not presented"

@@ -13,3 +13,10 @@ class MainPage(BasePage):
 
     def delete_account_button_click(self):
         self.browser.find_element(*MainPageLocators.DELETE_ACCOUNT).click()
+
+    def logout_account_button_click(self):
+        self.browser.find_element(*MainPageLocators.LOGOUT_ACCOUNT).click()
+
+    def contact_us_button_click(self):
+        self.browser.find_element(*MainPageLocators.CONTACT_US_BUTTON).click
+
